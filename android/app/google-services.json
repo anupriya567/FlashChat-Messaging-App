@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "292416407783",
+    "project_id": "flashchat-40e9e",
+    "storage_bucket": "flashchat-40e9e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:292416407783:android:980422eeea91b3ea5dba42",
+        "android_client_info": {
+          "package_name": "com.flames.chat_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "292416407783-8uadlbe6e6vtha4snlgkscpf9925ig5p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdkaY13MiFLxdziPqGBk9G5iT_Ua4fViw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "292416407783-8uadlbe6e6vtha4snlgkscpf9925ig5p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
