@@ -101,6 +101,7 @@ class _ChatScreenState extends State<ChatScreen> {
                       {
                         'text': messageText,
                         'sender': loggedInUser?.email,
+                        'time': FieldValue.serverTimestamp(),
                       });
                     },
                     child: Text(
@@ -124,7 +125,7 @@ class MessageStream extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<QuerySnapshot>(
-        stream: _firestore.collection('messages').snapshots(),
+        stream: _firestore.collection('messages') .orderBy('time', descending: false).snapshots(),
         builder: (context,snapshot)
         {
           if (!snapshot.hasData) {
@@ -140,7 +141,8 @@ class MessageStream extends StatelessWidget {
             dynamic msg_data = message.data();
             final messageText = msg_data['text'];
             final messageSender = msg_data["sender"];
-
+            final time = msg_data['time'];
+            print(time);
             final messageWidget = MessageBubble(text:messageText, sender:messageSender, isMe: (messageSender == loggedInUser?.email) );
             messageWidgets.add(messageWidget);
           }
